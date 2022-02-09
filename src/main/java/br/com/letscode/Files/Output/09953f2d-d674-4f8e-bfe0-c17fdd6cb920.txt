@@ -1,0 +1,25 @@
+ContaId: 09953f2d-d674-4f8e-bfe0-c17fdd6cb920
+Banco: Santander
+Numero da Agencia: 3121
+Numero da Conta: 35306174-8
+
+EXTRATO: 
+
+Saldo Inicial: $ 0,00
+Data: 2022-01-04T11:24:42, Operador: Felipe, Tipo: DEPOSITO, Valor: $100.0
+Data: 2022-01-04T13:24:42, Operador: Bryan, Tipo: SAQUE, Valor: $80.0
+Data: 2022-01-07T15:36:58, Operador: Eduarda, Tipo: SAQUE, Valor: $20.0
+Data: 2022-01-07T15:55:53, Operador: Larissa, Tipo: DEPOSITO, Valor: $260.0
+Data: 2022-01-08T13:18:40, Operador: Miguel, Tipo: DEPOSITO, Valor: $360.0
+Data: 2022-01-17T11:30:28, Operador: Larissa, Tipo: DEPOSITO, Valor: $100.0
+Data: 2022-01-17T14:30:28, Operador: João, Tipo: SAQUE, Valor: $280.0
+Data: 2022-01-20T15:12:24, Operador: Lucas, Tipo: SAQUE, Valor: $220.0
+Data: 2022-01-21T14:37:07, Operador: Clarissa, Tipo: DEPOSITO, Valor: $20.0
+Data: 2022-01-23T11:32:28, Operador: Helena, Tipo: DEPOSITO, Valor: $160.0
+Data: 2022-01-23T12:32:28, Operador: Catarina, Tipo: DEPOSITO, Valor: $80.0
+Data: 2022-01-25T12:22:43, Operador: Ingrid, Tipo: DEPOSITO, Valor: $100.0
+Data: 2022-01-25T14:22:43, Operador: Giovanna, Tipo: DEPOSITO, Valor: $160.0
+Data: 2022-01-26T12:53:20, Operador: Felipe, Tipo: DEPOSITO, Valor: $60.0
+Data: 2022-01-26T15:53:20, Operador: Luis, Tipo: DEPOSITO, Valor: $520.0
+Data: 2022-01-28T13:34:24, Operador: Ezequiel, Tipo: SAQUE, Valor: $160.0
+Saldo Final: $1160.0

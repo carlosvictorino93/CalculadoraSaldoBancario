@@ -1,0 +1,29 @@
+ContaId: bcec5aac-5da2-4277-bf96-466e99ae983c
+Banco: Santander
+Numero da Agencia: 3381
+Numero da Conta: 60214801-9
+
+EXTRATO: 
+
+Saldo Inicial: $ 0,00
+Data: 2022-01-03T11:20:27, Operador: Eduarda, Tipo: DEPOSITO, Valor: $280.0
+Data: 2022-01-04T11:24:42, Operador: Miguel, Tipo: DEPOSITO, Valor: $460.0
+Data: 2022-01-04T12:24:42, Operador: Brenda, Tipo: DEPOSITO, Valor: $40.0
+Data: 2022-01-04T15:24:42, Operador: Bryan, Tipo: DEPOSITO, Valor: $420.0
+Data: 2022-01-07T14:36:58, Operador: Brenda, Tipo: SAQUE, Valor: $40.0
+Data: 2022-01-07T15:36:58, Operador: Maitê, Tipo: DEPOSITO, Valor: $80.0
+Data: 2022-01-08T12:18:40, Operador: Victor, Tipo: SAQUE, Valor: $260.0
+Data: 2022-01-08T14:18:40, Operador: Ângelo, Tipo: DEPOSITO, Valor: $240.0
+Data: 2022-01-20T12:43:47, Operador: Miguel, Tipo: DEPOSITO, Valor: $60.0
+Data: 2022-01-20T13:12:24, Operador: Victor, Tipo: DEPOSITO, Valor: $520.0
+Data: 2022-01-20T14:43:47, Operador: Leonardo, Tipo: SAQUE, Valor: $560.0
+Data: 2022-01-21T13:37:07, Operador: Juliano, Tipo: DEPOSITO, Valor: $100.0
+Data: 2022-01-21T14:37:07, Operador: Francisco, Tipo: DEPOSITO, Valor: $580.0
+Data: 2022-01-21T14:42:37, Operador: Felipe, Tipo: DEPOSITO, Valor: $420.0
+Data: 2022-01-23T12:32:28, Operador: Lucas, Tipo: SAQUE, Valor: $580.0
+Data: 2022-01-26T12:53:20, Operador: Flôr, Tipo: SAQUE, Valor: $540.0
+Data: 2022-01-28T11:34:24, Operador: Emanuel, Tipo: SAQUE, Valor: $380.0
+Data: 2022-01-29T12:56:11, Operador: Leonardo, Tipo: SAQUE, Valor: $320.0
+Data: 2022-01-29T13:56:11, Operador: Ângelo, Tipo: DEPOSITO, Valor: $500.0
+Data: 2022-01-29T15:56:11, Operador: Luiza, Tipo: DEPOSITO, Valor: $600.0
+Saldo Final: $1620.0

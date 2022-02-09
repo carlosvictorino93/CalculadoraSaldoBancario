@@ -1,0 +1,28 @@
+ContaId: 148972c2-7062-40c3-9b4d-e96b538a90dc
+Banco: Santander
+Numero da Agencia: 2254
+Numero da Conta: 37025102-7
+
+EXTRATO: 
+
+Saldo Inicial: $ 0,00
+Data: 2022-01-03T15:20:27, Operador: Jade, Tipo: DEPOSITO, Valor: $360.0
+Data: 2022-01-04T11:24:42, Operador: Ângelo, Tipo: DEPOSITO, Valor: $20.0
+Data: 2022-01-07T11:36:58, Operador: Francisco, Tipo: SAQUE, Valor: $520.0
+Data: 2022-01-07T13:36:58, Operador: Maitê, Tipo: SAQUE, Valor: $40.0
+Data: 2022-01-07T14:36:58, Operador: Bryan, Tipo: DEPOSITO, Valor: $160.0
+Data: 2022-01-07T15:55:53, Operador: Bryan, Tipo: DEPOSITO, Valor: $100.0
+Data: 2022-01-08T11:18:40, Operador: Alexandre, Tipo: DEPOSITO, Valor: $80.0
+Data: 2022-01-08T15:18:40, Operador: Larissa, Tipo: SAQUE, Valor: $40.0
+Data: 2022-01-17T12:30:28, Operador: David, Tipo: DEPOSITO, Valor: $60.0
+Data: 2022-01-17T13:30:28, Operador: Frederico, Tipo: DEPOSITO, Valor: $80.0
+Data: 2022-01-17T14:30:28, Operador: Miguel, Tipo: DEPOSITO, Valor: $60.0
+Data: 2022-01-17T15:30:28, Operador: Antônio, Tipo: SAQUE, Valor: $440.0
+Data: 2022-01-21T13:42:37, Operador: Ezequiel, Tipo: DEPOSITO, Valor: $60.0
+Data: 2022-01-21T15:37:07, Operador: Flôr, Tipo: SAQUE, Valor: $540.0
+Data: 2022-01-23T11:32:28, Operador: Matheus, Tipo: SAQUE, Valor: $200.0
+Data: 2022-01-25T13:22:43, Operador: Eduarda, Tipo: DEPOSITO, Valor: $380.0
+Data: 2022-01-25T15:22:43, Operador: Felipe, Tipo: DEPOSITO, Valor: $540.0
+Data: 2022-01-28T12:34:24, Operador: Clarissa, Tipo: DEPOSITO, Valor: $180.0
+Data: 2022-01-29T13:56:11, Operador: Juliano, Tipo: SAQUE, Valor: $220.0
+Saldo Final: $80.0
