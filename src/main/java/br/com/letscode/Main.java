@@ -1,95 +1,65 @@
 package br.com.letscode;
 
+import br.com.letscode.Enums.Movimento;
+import br.com.letscode.Models.Conta;
+import br.com.letscode.Models.Operacao;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main (String[] args) {
 
-        Pessoa pessoa1 = new Pessoa();
-        pessoa1.setNome("João");
-        pessoa1.setIdade(16);
+        Map<String, Conta> contas = new HashMap<String, Conta>();
+        String path = ".\\src\\main\\java\\br\\com\\letscode\\Files\\";
 
-        Pessoa pessoa2 = new Pessoa();
-        pessoa2.setNome("Maria");
-        pessoa2.setIdade(20);
+        // Leitura e Processamento dos Dados
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(path + "Input\\operacoes.csv"));
+            lines.remove(0);
+            for (String line : lines) {
+                String[] dados = line.split(",");
 
-        Pessoa pessoa3 = new Pessoa();
-        pessoa3.setNome("Jorge");
-        pessoa3.setIdade(17);
+                LocalDateTime data = LocalDateTime.parse(dados[0], DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+                String operador = dados[5];
+                Movimento mv = Movimento.valueOf(dados[6]);
+                double valor = Double.parseDouble(dados[7]);
+                Operacao op = new Operacao(data, operador, mv, valor);
 
-        Pessoa pessoa4 = new Pessoa();
-        pessoa4.setNome("Jessica");
-        pessoa4.setIdade(20);
+                String id = dados[1];
 
-        Pessoa pessoa5 = new Pessoa();
-        pessoa5.setNome("Carlos");
-        pessoa5.setIdade(28);
+                if (contas.get(id) == null) {
+                    String banco = dados[2];
+                    String numAgencia = dados[3];
+                    String numConta = dados[4];
+                    Conta newConta = new Conta(banco, numAgencia, numConta);
+                    contas.put(id, newConta);
+                }
+                contas.get(id).getOperacoes().add(op);
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
-        // TESTES:
-
-        ListaDePessoas listaDePessoas = new ListaDePessoas();
-
-        System.out.println("Teste void adicionar(Pessoa pessoa)");
-        listaDePessoas.adicionar(pessoa1);
-        listaDePessoas.listarTodos();
-
-        System.out.println("Teste void adicionar(Pessoa pessoa)");
-        listaDePessoas.adicionar(pessoa2);
-        listaDePessoas.listarTodos();
-
-        System.out.println("Teste void adicionar(int index, Pessoa pessoa)");
-        listaDePessoas.adicionar(0,pessoa3);
-        listaDePessoas.listarTodos();
-
-        ListaDePessoas listaDePessoas2 = new ListaDePessoas();
-
-        System.out.println("Teste void adicionar(Pessoa pessoa)");
-        listaDePessoas2.adicionar(pessoa4); // Teste void adicionar(Pessoa pessoa)
-        listaDePessoas2.listarTodos();
-
-        System.out.println("Teste void adicionar(Pessoa pessoa)");
-        listaDePessoas2.adicionar(pessoa5); // Teste void adicionar(Pessoa pessoa)
-        listaDePessoas2.listarTodos();
-
-        System.out.println("Teste Pessoa buscar(String nome)");
-        System.out.println(listaDePessoas.buscar("Maria").getNome());
-        System.out.println();
-
-        System.out.println("Teste void adicionarTodos(ListaDePessoas listaDePessoas)");
-        listaDePessoas.adicionarTodos(listaDePessoas2);
-        listaDePessoas.listarTodos();
-
-        System.out.println("Teste void remover(Pessoa pessoa)");
-        listaDePessoas.remover(pessoa4);
-        listaDePessoas.listarTodos();
-
-        System.out.println("Teste void remover(int index);");
-        listaDePessoas.remover(3);
-        listaDePessoas.listarTodos();
-
-        System.out.println("Teste Pessoa getPessoa(int index)");
-        System.out.println(listaDePessoas.getPessoa(1).getNome());
-        System.out.println();
-
-        System.out.println("Teste int obterTamanho()");
-        listaDePessoas.listarTodos();
-        System.out.println();
-
-        System.out.println("Teste int obterTamanho()");
-        System.out.println(listaDePessoas.buscarPosicao("Maria"));
-        System.out.println();
-
-        System.out.println("Teste Pessoa[] toArray()");
-        System.out.println( Arrays.toString(listaDePessoas.toArray()));
-        System.out.println();
-
-        System.out.println("Teste void adicionarTodos(ListaDePessoas listaDePessoas)");
-        listaDePessoas.adicionarTodos(listaDePessoas2);
-        listaDePessoas.listarTodos();
-
-        System.out.println("Teste void removerTodos(ListaDePessoas listaDePessoas)");
-        listaDePessoas.removerTodos(listaDePessoas2);
-        listaDePessoas.listarTodos();
-
+        // Escrita dos Arquivos Finais
+        contas.entrySet().forEach(ct -> {
+            try {
+                String content = "ContaId: " + ct.getKey() + "\n" + ct.getValue().toString();
+                Files.write(Paths.get(path + "Output\\" + ct.getKey() +".txt"), Arrays.asList(content),
+                        StandardCharsets.UTF_8,
+                        StandardOpenOption.CREATE);
+            } catch (IOException ex) {
+                        ex.printStackTrace();
+                 }
+            });
+        }
     }
-}
